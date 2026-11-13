@@ -1,0 +1,18 @@
+name: Validate 4i7
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate model
+        run: python3 scripts/validate_model.py
+      - name: Validate memory
+        run: python3 scripts/validate_knowledge.py

@@ -354,5 +354,11 @@
     "Do not treat seven pillars as seven mandatory agents.",
     "Do not conflate spiral directions and text embeddings.",
     "Actual architecture of an external OS must be audited before mapping."
-  ]
+  ],
+  "knowledge_layer": {
+    "state": "research",
+    "index_file": "knowledge/index.json",
+    "evolution_policy": "docs/06-evolution.md",
+    "automatic_rewriting": false
+  }
 }
