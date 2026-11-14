@@ -24,7 +24,7 @@ class ResearchMatrixTests(unittest.TestCase):
                     else:
                         self.assertEqual(a["status"], "open")
                         self.assertIsNone(a["text"])
-        self.assertEqual(set(populated), {(p, n, a) for p, sides in [("P1", [1, 2, 4]), ("P3", [1, 2])] for n in sides for a in ["yes", "no"]} | {("P3", 3, "yes")})
+        self.assertEqual(set(populated), {(p, n, a) for p, sides in [("P1", [1, 2, 4]), ("P3", [1, 2])] for n in sides for a in ["yes", "no"]} | {("P3", 3, a) for a in ["yes", "no"]})
 
     def test_gliding_fixation_is_not_contract(self):
         m = json.loads((ROOT / "model/research/matrix-20261114.json").read_text())
@@ -60,9 +60,9 @@ class ResearchMatrixTests(unittest.TestCase):
         p = m["pillars"][2]
         self.assertIn("пока не найдена", p["sides"][1]["aspects"]["no"]["text"])
         self.assertIn("возврата", p["sides"][1]["aspects"]["yes"]["text"])
-        self.assertIn("не следует насильно", p["sides"][2]["aspects"]["yes"]["text"])
-        self.assertIn("6878642283", p["sides"][2]["aspects"]["yes"]["source"])
-        self.assertEqual(p["sides"][2]["aspects"]["no"]["status"], "open")
+        self.assertIn("не натягивать", p["sides"][2]["aspects"]["no"]["text"])
+        self.assertIn("6878777871", p["sides"][2]["aspects"]["yes"]["source"])
+        self.assertEqual(p["sides"][2]["aspects"]["no"]["status"], "captured")
         for a in p["sides"][3]["aspects"].values():
             self.assertEqual(a["status"], "open")
             self.assertIsNone(a["text"])

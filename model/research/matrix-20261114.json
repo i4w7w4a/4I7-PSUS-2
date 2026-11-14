@@ -247,15 +247,15 @@
           "aspects": {
             "yes": {
               "status": "captured",
-              "text": "Вычленить и описать элементы, которые не следует насильно встраивать в скелетную схему; дать им понятие, чтобы их наличие было понятно без путаницы. Примеры автора: человеческое решение и пока нерешённые вопросы.",
+              "text": "Отдельно называть и описывать элементы вне скелетной формы, чтобы понимать, что они есть, и не создавать путаницу.",
               "origin": "author_discussion_editorial_paraphrase",
-              "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6878642283"
+              "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6878777871"
             },
             "no": {
-              "status": "open",
-              "text": null,
-              "origin": null,
-              "source": null
+              "status": "captured",
+              "text": "Замечать элементы вне скелетной формы и не натягивать их на схему насильно.",
+              "origin": "author_discussion_editorial_paraphrase",
+              "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6878777871"
             }
           },
           "limitations": [
@@ -287,9 +287,9 @@
       ],
       "open_questions": [
         "Вне скелета — не обязательно вне системы? Это вопрос ассистента, автором ещё не подтверждён.",
-        "Как раскрываются P3/3.нет и оба аспекта P3/4?"
+        "Как раскрываются оба аспекта P3/4?"
       ],
-      "source_update": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6878642283"
+      "source_update": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6878777871"
     },
     {
       "id": "P4",
