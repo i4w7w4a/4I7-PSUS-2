@@ -24,7 +24,25 @@ class ResearchMatrixTests(unittest.TestCase):
                     else:
                         self.assertEqual(a["status"], "open")
                         self.assertIsNone(a["text"])
-        self.assertEqual(set(populated), {("P1", n, a) for n in [1, 2] for a in ["yes", "no"]})
+        self.assertEqual(set(populated), {(p, n, a) for p in ["P1", "P3"] for n in [1, 2] for a in ["yes", "no"]})
+
+    def test_author_numbering_and_candidates(self):
+        m = json.loads((ROOT / "model/research/matrix-20261114.json").read_text())
+        f = json.loads((ROOT / "model/research/foundation-20261114.json").read_text())
+        for data in [m, f]:
+            self.assertEqual(data["pillars"][1]["title"], "Голос")
+            self.assertEqual(data["pillars"][2]["title"], "Скелет связей")
+            self.assertEqual(data["numbering_revision"]["previous_to_current"], {"P2": "P3", "P3": "P2"})
+            self.assertFalse(data["numbering_revision"]["historical_sources_rewritten"])
+        for p in m["pillars"]:
+            for s in p["sides"]:
+                self.assertEqual(s["id"], f'{p["id"]}.research.side.{s["number"]}')
+        for candidate in f["pillars"][1]["candidates"]:
+            self.assertEqual(candidate["status"], "under_review")
+            self.assertTrue(candidate["id"].startswith("P2."))
+        self.assertIn("подтверждён", m["pillars"][2]["open_questions"][0])
+        self.assertIn("детализацию", m["pillars"][2]["sides"][0]["aspects"]["no"]["text"])
+        self.assertIn("взаимодействуют", m["pillars"][2]["sides"][1]["aspects"]["yes"]["text"])
 
     def test_second_side_correction(self):
         m = json.loads((ROOT / "model/research/matrix-20261114.json").read_text())

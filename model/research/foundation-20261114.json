@@ -68,8 +68,8 @@
     },
     {
       "id": "P2",
-      "title": "Скелет связей",
-      "scope": "Различение частей целого и отношений между ними.",
+      "title": "Голос",
+      "scope": "Встреча смысла с выражением и другим воспринимающим.",
       "positions": {
         "front": {
           "id": "P2.front",
@@ -95,40 +95,45 @@
       "candidates": [
         {
           "id": "P2.candidate.1",
-          "text": "Какие части и различия образуют целое?",
+          "text": "Какое понимание выражаем?",
           "status": "under_review",
           "origin": "pro_and_joint_discussion_proposal",
           "spatial_assignment": null
         },
         {
           "id": "P2.candidate.2",
-          "text": "Как части связаны и зависят друг от друга?",
+          "text": "Как его воспринимает другой?",
           "status": "under_review",
           "origin": "pro_and_joint_discussion_proposal",
           "spatial_assignment": null
         },
         {
           "id": "P2.candidate.3",
-          "text": "Что карта связей пока не охватывает?",
+          "text": "Что язык искажает или оставляет невыраженным?",
           "status": "under_review",
           "origin": "pro_and_joint_discussion_proposal",
           "spatial_assignment": null
         },
         {
           "id": "P2.candidate.4",
-          "text": "Что меняется в целом при изменении связи?",
+          "text": "Что открывается при переформулировании?",
           "status": "under_review",
           "origin": "pro_and_joint_discussion_proposal",
           "spatial_assignment": null
         }
       ],
-      "duality_note": "Две стороны связи могут поддерживать и ограничивать; такая трактовка двойственности пока гипотеза.",
-      "open_question": "Что является связью по существу, а что только ассоциацией?"
+      "duality_note": "Ясность / потеря оттенков — возможная пара для исследования, не готовые два аспекта.",
+      "open_question": "Как сохранить совместный танец смысла, не превращая его в одностороннюю передачу?",
+      "author_image": {
+        "text": "Молчание и говорение как образ двойственности.",
+        "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6878307731",
+        "status": "author_discussion"
+      }
     },
     {
       "id": "P3",
-      "title": "Голос",
-      "scope": "Встреча смысла с выражением и другим воспринимающим.",
+      "title": "Скелет связей",
+      "scope": "Различение частей целого и отношений между ними.",
       "positions": {
         "front": {
           "id": "P3.front",
@@ -154,35 +159,40 @@
       "candidates": [
         {
           "id": "P3.candidate.1",
-          "text": "Какое понимание выражаем?",
+          "text": "Какие части и различия образуют целое?",
           "status": "under_review",
           "origin": "pro_and_joint_discussion_proposal",
           "spatial_assignment": null
         },
         {
           "id": "P3.candidate.2",
-          "text": "Как его воспринимает другой?",
+          "text": "Как части связаны и зависят друг от друга?",
           "status": "under_review",
           "origin": "pro_and_joint_discussion_proposal",
           "spatial_assignment": null
         },
         {
           "id": "P3.candidate.3",
-          "text": "Что язык искажает или оставляет невыраженным?",
+          "text": "Что карта связей пока не охватывает?",
           "status": "under_review",
           "origin": "pro_and_joint_discussion_proposal",
           "spatial_assignment": null
         },
         {
           "id": "P3.candidate.4",
-          "text": "Что открывается при переформулировании?",
+          "text": "Что меняется в целом при изменении связи?",
           "status": "under_review",
           "origin": "pro_and_joint_discussion_proposal",
           "spatial_assignment": null
         }
       ],
-      "duality_note": "Ясность / потеря оттенков — возможная пара для исследования, не готовые два аспекта.",
-      "open_question": "Как сохранить совместный танец смысла, не превращая его в одностороннюю передачу?"
+      "duality_note": "Автор раскрыл пары сторон 1 и 2 скелета; см. docs/09-matrix.md. Прежние четыре вопроса ниже остаются отдельными кандидатами, не заменяют эти стороны.",
+      "open_question": "Что является связью по существу, а что только ассоциацией?",
+      "author_image": {
+        "text": "Ключица, центральная косточка, плечи и треугольник как авторский образ тройки, не научное обоснование.",
+        "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6878307731",
+        "status": "author_discussion"
+      }
     },
     {
       "id": "P4",
@@ -420,5 +430,16 @@
       "duality_note": "Сохранение / пересмотр — возможная пара, но ещё не определение сторон.",
       "open_question": "Как соотносятся P7, суперконтракт и точка сборки без их отождествления?"
     }
-  ]
+  ],
+  "numbering_revision": {
+    "date": "2026-11-14",
+    "status": "author_confirmed_numbering",
+    "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6878307731",
+    "previous_to_current": {
+      "P2": "P3",
+      "P3": "P2"
+    },
+    "historical_sources_rewritten": false,
+    "note": "Mapping applies only to prior numbering where P2 was Skeleton and P3 Voice. Historical sources retain their original addresses; canonical model is unchanged."
+  }
 }

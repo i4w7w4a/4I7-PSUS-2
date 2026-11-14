@@ -6,7 +6,7 @@
   "spatial_assignment": null,
   "document": "docs/09-matrix.md",
   "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6875047183",
-  "numbering_note": "P1.side.2 — вторая исследовательская сторона первого столпа, не столп P2; никакого соответствия front/right/back/left пока нет.",
+  "numbering_note": "P1.side.2 — вторая исследовательская сторона первого столпа, не столп P3; никакого соответствия front/right/back/left пока нет.",
   "pillars": [
     {
       "id": "P1",
@@ -100,7 +100,7 @@
     },
     {
       "id": "P2",
-      "title": "Скелет связей",
+      "title": "Голос",
       "sides": [
         {
           "id": "P2.research.side.1",
@@ -190,47 +190,47 @@
     },
     {
       "id": "P3",
-      "title": "Голос",
+      "title": "Скелет связей",
       "sides": [
         {
           "id": "P3.research.side.1",
           "number": 1,
-          "title": null,
-          "status": "open",
-          "description": null,
+          "title": "Да",
+          "status": "author_discussion",
+          "description": "Выстраивание ясного скелета с пределом детализации.",
           "aspects": {
             "yes": {
-              "status": "open",
-              "text": null,
-              "origin": null,
-              "source": null
+              "status": "captured",
+              "text": "Выстраивать саму структуру: основные узлы, связи, направления и векторы, позволяющие быстро охватить целое.",
+              "origin": "author_discussion_editorial_paraphrase",
+              "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6878307731"
             },
             "no": {
-              "status": "open",
-              "text": null,
-              "origin": null,
-              "source": null
+              "status": "captured",
+              "text": "Ограничивать детализацию: не уходить бесконечно до слов, букв и символов, теряя ясность скелета.",
+              "origin": "author_discussion_editorial_paraphrase",
+              "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6878307731"
             }
           }
         },
         {
           "id": "P3.research.side.2",
           "number": 2,
-          "title": null,
-          "status": "open",
-          "description": null,
+          "title": "Нет",
+          "status": "author_discussion",
+          "description": "Рассмотрение не подключённых к общему скелету структур и их взаимодействий.",
           "aspects": {
             "yes": {
-              "status": "open",
-              "text": null,
-              "origin": null,
-              "source": null
+              "status": "captured",
+              "text": "Описывать эти структуры настолько ясно, насколько нужно: на что они влияют и каким образом взаимодействуют.",
+              "origin": "author_discussion_editorial_paraphrase",
+              "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6878307731"
             },
             "no": {
-              "status": "open",
-              "text": null,
-              "origin": null,
-              "source": null
+              "status": "captured",
+              "text": "Выявлять структуры и элементы, не подключённые к рассматриваемому общему скелету или не вписывающиеся в его обычную костную структуру.",
+              "origin": "author_discussion_editorial_paraphrase",
+              "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6878307731"
             }
           }
         },
@@ -276,6 +276,10 @@
             }
           }
         }
+      ],
+      "open_questions": [
+        "Вне скелета — не обязательно вне системы? Это вопрос ассистента, автором ещё не подтверждён.",
+        "Как раскрываются стороны 3 и 4?"
       ]
     },
     {
@@ -638,5 +642,16 @@
         }
       ]
     }
-  ]
+  ],
+  "numbering_revision": {
+    "date": "2026-11-14",
+    "status": "author_confirmed_numbering",
+    "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6878307731",
+    "previous_to_current": {
+      "P2": "P3",
+      "P3": "P2"
+    },
+    "historical_sources_rewritten": false,
+    "note": "Mapping applies only to prior numbering where P2 was Skeleton and P3 Voice. Historical sources retain their original addresses; canonical model is unchanged."
+  }
 }
