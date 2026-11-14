@@ -266,30 +266,35 @@
         {
           "id": "P3.research.side.4",
           "number": 4,
-          "title": null,
-          "status": "open",
-          "description": null,
+          "title": "Скольжение",
+          "status": "author_discussion",
+          "description": "Скольжение через скелет: возврат внутрь и движение вперёд к содержательному раскрытию.",
           "aspects": {
             "yes": {
-              "status": "open",
-              "text": null,
-              "origin": null,
-              "source": null
+              "status": "captured",
+              "text": "Движение вперёд через скелет к остальным столпам и более содержательным «мясным и сухожильным» структурам.",
+              "origin": "author_discussion_editorial_paraphrase",
+              "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6878834784"
             },
             "no": {
-              "status": "open",
-              "text": null,
-              "origin": null,
-              "source": null
+              "status": "captured",
+              "text": "Возврат внутрь по скелету к ранее замеченной в P3/2 неясности с более полным пониманием после прохождения системы.",
+              "origin": "author_discussion_editorial_paraphrase",
+              "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6878834784"
             }
-          }
+          },
+          "revision_note": "Сначала автор назвал возвращение плюсом, затем сам исправил: возврат — P3/4.нет, движение вперёд — P3/4.да. Актуальна последняя расстановка.",
+          "limitations": [
+            "Возврат не гарантирует разрешения неясности.",
+            "Жёсткий алгоритм и порядок обхода не установлены."
+          ]
         }
       ],
       "open_questions": [
         "Вне скелета — не обязательно вне системы? Это вопрос ассистента, автором ещё не подтверждён.",
-        "Как раскрываются оба аспекта P3/4?"
+        "По каким признакам выбирать момент возврата и как проверять, что более полное понимание действительно прояснило неясность?"
       ],
-      "source_update": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6878777871"
+      "source_update": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6878834784"
     },
     {
       "id": "P4",
