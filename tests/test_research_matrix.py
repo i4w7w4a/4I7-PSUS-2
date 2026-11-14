@@ -24,7 +24,18 @@ class ResearchMatrixTests(unittest.TestCase):
                     else:
                         self.assertEqual(a["status"], "open")
                         self.assertIsNone(a["text"])
-        self.assertEqual(set(populated), {(p, n, a) for p in ["P1", "P3"] for n in [1, 2] for a in ["yes", "no"]})
+        self.assertEqual(set(populated), {(p, n, a) for p, sides in [("P1", [1, 2, 4]), ("P3", [1, 2])] for n in sides for a in ["yes", "no"]})
+
+    def test_gliding_fixation_is_not_contract(self):
+        m = json.loads((ROOT / "model/research/matrix-20261114.json").read_text())
+        s = m["pillars"][0]["sides"][3]
+        self.assertIn("Скольжение далее", s["aspects"]["yes"]["text"])
+        self.assertIn("точка фиксации", s["aspects"]["no"]["text"])
+        self.assertIn("6876277084", s["aspects"]["no"]["source"])
+        self.assertIn("не установлено", s["open_questions"][0])
+        self.assertIn("весь рассматриваемый аспект", s["node_note"])
+        for a in m["pillars"][0]["sides"][2]["aspects"].values():
+            self.assertEqual(a["status"], "open")
 
     def test_author_numbering_and_candidates(self):
         m = json.loads((ROOT / "model/research/matrix-20261114.json").read_text())

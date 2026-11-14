@@ -80,21 +80,25 @@
           "number": 4,
           "title": "Скольжение",
           "status": "author_discussion",
-          "description": "Скольжение: не замкнуться в первом понимании; связь с последствиями и дальнейшим путём установлена в разговоре, механизм открыт.",
+          "description": "Фиксируем и скользим дальше: фиксация удерживает раскрытый смысл, не объявляя путь завершённым.",
           "aspects": {
             "yes": {
-              "status": "open",
-              "text": null,
-              "origin": null,
-              "source": null
+              "status": "captured",
+              "text": "Скольжение далее, продолжение движения.",
+              "origin": "author_discussion_editorial_paraphrase",
+              "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6876277084"
             },
             "no": {
-              "status": "open",
-              "text": null,
-              "origin": null,
-              "source": null
+              "status": "captured",
+              "text": "Предварительно: точка фиксации скольжения, удерживающая общий вывод о смысле и конструкции рассматриваемой ноды.",
+              "origin": "author_discussion_editorial_paraphrase",
+              "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6876277084"
             }
-          }
+          },
+          "node_note": "Нода — весь рассматриваемый аспект; не подменять автоматически всем столпом, стороной или программным узлом.",
+          "open_questions": [
+            "Отношение точки фиксации к контракту и суперконтракту не установлено; критерий завершённости вывода и обязательный порядок обхода не назначены."
+          ]
         }
       ]
     },
