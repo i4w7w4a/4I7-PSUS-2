@@ -24,7 +24,7 @@ class ResearchMatrixTests(unittest.TestCase):
                     else:
                         self.assertEqual(a["status"], "open")
                         self.assertIsNone(a["text"])
-        self.assertEqual(set(populated), {(p, n, a) for p, sides in [("P1", [1, 2, 4]), ("P3", [1, 2])] for n in sides for a in ["yes", "no"]})
+        self.assertEqual(set(populated), {(p, n, a) for p, sides in [("P1", [1, 2, 4]), ("P3", [1, 2])] for n in sides for a in ["yes", "no"]} | {("P3", 3, "yes")})
 
     def test_gliding_fixation_is_not_contract(self):
         m = json.loads((ROOT / "model/research/matrix-20261114.json").read_text())
@@ -53,7 +53,19 @@ class ResearchMatrixTests(unittest.TestCase):
             self.assertTrue(candidate["id"].startswith("P2."))
         self.assertIn("подтверждён", m["pillars"][2]["open_questions"][0])
         self.assertIn("детализацию", m["pillars"][2]["sides"][0]["aspects"]["no"]["text"])
-        self.assertIn("взаимодействуют", m["pillars"][2]["sides"][1]["aspects"]["yes"]["text"])
+        self.assertIn("якорь", m["pillars"][2]["sides"][1]["aspects"]["yes"]["text"])
+
+    def test_p3_return_and_observation(self):
+        m = json.loads((ROOT / "model/research/matrix-20261114.json").read_text())
+        p = m["pillars"][2]
+        self.assertIn("пока не найдена", p["sides"][1]["aspects"]["no"]["text"])
+        self.assertIn("возврата", p["sides"][1]["aspects"]["yes"]["text"])
+        self.assertIn("не следует насильно", p["sides"][2]["aspects"]["yes"]["text"])
+        self.assertIn("6878642283", p["sides"][2]["aspects"]["yes"]["source"])
+        self.assertEqual(p["sides"][2]["aspects"]["no"]["status"], "open")
+        for a in p["sides"][3]["aspects"].values():
+            self.assertEqual(a["status"], "open")
+            self.assertIsNone(a["text"])
 
     def test_second_side_correction(self):
         m = json.loads((ROOT / "model/research/matrix-20261114.json").read_text())

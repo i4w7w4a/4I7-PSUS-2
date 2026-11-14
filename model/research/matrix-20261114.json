@@ -222,34 +222,34 @@
           "number": 2,
           "title": "Нет",
           "status": "author_discussion",
-          "description": "Рассмотрение не подключённых к общему скелету структур и их взаимодействий.",
+          "description": "Ненайденная связь и сохранение якоря возврата к неясному фрагменту.",
           "aspects": {
             "yes": {
               "status": "captured",
-              "text": "Описывать эти структуры настолько ясно, насколько нужно: на что они влияют и каким образом взаимодействуют.",
+              "text": "Вычленить неясный фрагмент, сохранить вопросы «почему связь не налаживается?» и «к чему принадлежит элемент?». Оставить слепок и якорь/зацеп/портал возврата после общего понимания системы, чтобы не забыть неясность.",
               "origin": "author_discussion_editorial_paraphrase",
-              "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6878307731"
+              "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6878642283"
             },
             "no": {
               "status": "captured",
-              "text": "Выявлять структуры и элементы, не подключённые к рассматриваемому общему скелету или не вписывающиеся в его обычную костную структуру.",
+              "text": "Связь пока не найдена: элемент не укладывается в текущую схему. Это не доказательство отсутствия связи навсегда.",
               "origin": "author_discussion_editorial_paraphrase",
-              "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6878307731"
+              "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6878642283"
             }
           }
         },
         {
           "id": "P3.research.side.3",
           "number": 3,
-          "title": null,
-          "status": "open",
-          "description": null,
+          "title": "Воздержание",
+          "status": "author_discussion",
+          "description": "Выслушивать структуру: созерцательно описывать то, что не следует насильно изображать скелетными связями.",
           "aspects": {
             "yes": {
-              "status": "open",
-              "text": null,
-              "origin": null,
-              "source": null
+              "status": "captured",
+              "text": "Вычленить и описать элементы, которые не следует насильно встраивать в скелетную схему; дать им понятие, чтобы их наличие было понятно без путаницы. Примеры автора: человеческое решение и пока нерешённые вопросы.",
+              "origin": "author_discussion_editorial_paraphrase",
+              "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6878642283"
             },
             "no": {
               "status": "open",
@@ -257,7 +257,11 @@
               "origin": null,
               "source": null
             }
-          }
+          },
+          "limitations": [
+            "Не приравнивать «вне скелета» к «вне всей системы».",
+            "Пример нерешённых вопросов не гарантирует их будущего разрешения."
+          ]
         },
         {
           "id": "P3.research.side.4",
@@ -283,8 +287,9 @@
       ],
       "open_questions": [
         "Вне скелета — не обязательно вне системы? Это вопрос ассистента, автором ещё не подтверждён.",
-        "Как раскрываются стороны 3 и 4?"
-      ]
+        "Как раскрываются P3/3.нет и оба аспекта P3/4?"
+      ],
+      "source_update": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6878642283"
     },
     {
       "id": "P4",
