@@ -1,0 +1,642 @@
+{
+  "schema_version": "0.1.0",
+  "status": "under_review",
+  "date": "2026-11-14",
+  "canonical_model_changed": false,
+  "spatial_assignment": null,
+  "document": "docs/09-matrix.md",
+  "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6875047183",
+  "numbering_note": "P1.side.2 — вторая исследовательская сторона первого столпа, не столп P2; никакого соответствия front/right/back/left пока нет.",
+  "pillars": [
+    {
+      "id": "P1",
+      "title": "Идея",
+      "sides": [
+        {
+          "id": "P1.research.side.1",
+          "number": 1,
+          "title": "Да",
+          "status": "author_discussion",
+          "description": "Да: почувствовать вес идеи и положительный импульс, не превращая её в икону.",
+          "aspects": {
+            "yes": {
+              "status": "captured",
+              "text": "Почувствовать вес идеи, принять её положительный импульс и дать ей раскрыться.",
+              "origin": "author_discussion_editorial_paraphrase",
+              "source": "https://github.com/i4w7w4a/4i7_psys/issues/12"
+            },
+            "no": {
+              "status": "captured",
+              "text": "Изначальная возможность той же силы замкнуть восприятие: избыток «да», иконизация идеи, потеря других возможностей.",
+              "origin": "author_discussion_editorial_paraphrase",
+              "source": "https://github.com/i4w7w4a/4i7_psys/issues/12"
+            }
+          }
+        },
+        {
+          "id": "P1.research.side.2",
+          "number": 2,
+          "title": "Нет",
+          "status": "author_discussion",
+          "description": "Нет: сомнение углубляет отрицание; ответы на эти вопросы выявляют потенциальные препятствия и последствия. Это два аспекта второй стороны, а не моральная оценка сомнения.",
+          "aspects": {
+            "yes": {
+              "status": "captured",
+              "text": "Получить ответы на сомнения и вопросы: вывести на поверхность части идеи и последствия, способные негативно повлиять на её развитие.",
+              "origin": "author_discussion_editorial_paraphrase",
+              "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6875047183"
+            },
+            "no": {
+              "status": "captured",
+              "text": "Углубить отрицание: сомневаться, спрашивать «к чему это приведёт?», «насколько это полезно?», проверять однозначную правильность идеи и её формулировки.",
+              "origin": "author_discussion_editorial_paraphrase",
+              "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6875047183"
+            }
+          }
+        },
+        {
+          "id": "P1.research.side.3",
+          "number": 3,
+          "title": "Воздержание",
+          "status": "author_discussion",
+          "description": "Воздержание: выслушать идею, вникнуть в смысл и суть; это не равнодушие.",
+          "aspects": {
+            "yes": {
+              "status": "open",
+              "text": null,
+              "origin": null,
+              "source": null
+            },
+            "no": {
+              "status": "open",
+              "text": null,
+              "origin": null,
+              "source": null
+            }
+          }
+        },
+        {
+          "id": "P1.research.side.4",
+          "number": 4,
+          "title": "Скольжение",
+          "status": "author_discussion",
+          "description": "Скольжение: не замкнуться в первом понимании; связь с последствиями и дальнейшим путём установлена в разговоре, механизм открыт.",
+          "aspects": {
+            "yes": {
+              "status": "open",
+              "text": null,
+              "origin": null,
+              "source": null
+            },
+            "no": {
+              "status": "open",
+              "text": null,
+              "origin": null,
+              "source": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "P2",
+      "title": "Скелет связей",
+      "sides": [
+        {
+          "id": "P2.research.side.1",
+          "number": 1,
+          "title": null,
+          "status": "open",
+          "description": null,
+          "aspects": {
+            "yes": {
+              "status": "open",
+              "text": null,
+              "origin": null,
+              "source": null
+            },
+            "no": {
+              "status": "open",
+              "text": null,
+              "origin": null,
+              "source": null
+            }
+          }
+        },
+        {
+          "id": "P2.research.side.2",
+          "number": 2,
+          "title": null,
+          "status": "open",
+          "description": null,
+          "aspects": {
+            "yes": {
+              "status": "open",
+              "text": null,
+              "origin": null,
+              "source": null
+            },
+            "no": {
+              "status": "open",
+              "text": null,
+              "origin": null,
+              "source": null
+            }
+          }
+        },
+        {
+          "id": "P2.research.side.3",
+          "number": 3,
+          "title": null,
+          "status": "open",
+          "description": null,
+          "aspects": {
+            "yes": {
+              "status": "open",
+              "text": null,
+              "origin": null,
+              "source": null
+            },
+            "no": {
+              "status": "open",
+              "text": null,
+              "origin": null,
+              "source": null
+            }
+          }
+        },
+        {
+          "id": "P2.research.side.4",
+          "number": 4,
+          "title": null,
+          "status": "open",
+          "description": null,
+          "aspects": {
+            "yes": {
+              "status": "open",
+              "text": null,
+              "origin": null,
+              "source": null
+            },
+            "no": {
+              "status": "open",
+              "text": null,
+              "origin": null,
+              "source": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "P3",
+      "title": "Голос",
+      "sides": [
+        {
+          "id": "P3.research.side.1",
+          "number": 1,
+          "title": null,
+          "status": "open",
+          "description": null,
+          "aspects": {
+            "yes": {
+              "status": "open",
+              "text": null,
+              "origin": null,
+              "source": null
+            },
+            "no": {
+              "status": "open",
+              "text": null,
+              "origin": null,
+              "source": null
+            }
+          }
+        },
+        {
+          "id": "P3.research.side.2",
+          "number": 2,
+          "title": null,
+          "status": "open",
+          "description": null,
+          "aspects": {
+            "yes": {
+              "status": "open",
+              "text": null,
+              "origin": null,
+              "source": null
+            },
+            "no": {
+              "status": "open",
+              "text": null,
+              "origin": null,
+              "source": null
+            }
+          }
+        },
+        {
+          "id": "P3.research.side.3",
+          "number": 3,
+          "title": null,
+          "status": "open",
+          "description": null,
+          "aspects": {
+            "yes": {
+              "status": "open",
+              "text": null,
+              "origin": null,
+              "source": null
+            },
+            "no": {
+              "status": "open",
+              "text": null,
+              "origin": null,
+              "source": null
+            }
+          }
+        },
+        {
+          "id": "P3.research.side.4",
+          "number": 4,
+          "title": null,
+          "status": "open",
+          "description": null,
+          "aspects": {
+            "yes": {
+              "status": "open",
+              "text": null,
+              "origin": null,
+              "source": null
+            },
+            "no": {
+              "status": "open",
+              "text": null,
+              "origin": null,
+              "source": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "P4",
+      "title": "Баланс",
+      "sides": [
+        {
+          "id": "P4.research.side.1",
+          "number": 1,
+          "title": null,
+          "status": "open",
+          "description": null,
+          "aspects": {
+            "yes": {
+              "status": "open",
+              "text": null,
+              "origin": null,
+              "source": null
+            },
+            "no": {
+              "status": "open",
+              "text": null,
+              "origin": null,
+              "source": null
+            }
+          }
+        },
+        {
+          "id": "P4.research.side.2",
+          "number": 2,
+          "title": null,
+          "status": "open",
+          "description": null,
+          "aspects": {
+            "yes": {
+              "status": "open",
+              "text": null,
+              "origin": null,
+              "source": null
+            },
+            "no": {
+              "status": "open",
+              "text": null,
+              "origin": null,
+              "source": null
+            }
+          }
+        },
+        {
+          "id": "P4.research.side.3",
+          "number": 3,
+          "title": null,
+          "status": "open",
+          "description": null,
+          "aspects": {
+            "yes": {
+              "status": "open",
+              "text": null,
+              "origin": null,
+              "source": null
+            },
+            "no": {
+              "status": "open",
+              "text": null,
+              "origin": null,
+              "source": null
+            }
+          }
+        },
+        {
+          "id": "P4.research.side.4",
+          "number": 4,
+          "title": null,
+          "status": "open",
+          "description": null,
+          "aspects": {
+            "yes": {
+              "status": "open",
+              "text": null,
+              "origin": null,
+              "source": null
+            },
+            "no": {
+              "status": "open",
+              "text": null,
+              "origin": null,
+              "source": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "P5",
+      "title": "Действие",
+      "sides": [
+        {
+          "id": "P5.research.side.1",
+          "number": 1,
+          "title": null,
+          "status": "open",
+          "description": null,
+          "aspects": {
+            "yes": {
+              "status": "open",
+              "text": null,
+              "origin": null,
+              "source": null
+            },
+            "no": {
+              "status": "open",
+              "text": null,
+              "origin": null,
+              "source": null
+            }
+          }
+        },
+        {
+          "id": "P5.research.side.2",
+          "number": 2,
+          "title": null,
+          "status": "open",
+          "description": null,
+          "aspects": {
+            "yes": {
+              "status": "open",
+              "text": null,
+              "origin": null,
+              "source": null
+            },
+            "no": {
+              "status": "open",
+              "text": null,
+              "origin": null,
+              "source": null
+            }
+          }
+        },
+        {
+          "id": "P5.research.side.3",
+          "number": 3,
+          "title": null,
+          "status": "open",
+          "description": null,
+          "aspects": {
+            "yes": {
+              "status": "open",
+              "text": null,
+              "origin": null,
+              "source": null
+            },
+            "no": {
+              "status": "open",
+              "text": null,
+              "origin": null,
+              "source": null
+            }
+          }
+        },
+        {
+          "id": "P5.research.side.4",
+          "number": 4,
+          "title": null,
+          "status": "open",
+          "description": null,
+          "aspects": {
+            "yes": {
+              "status": "open",
+              "text": null,
+              "origin": null,
+              "source": null
+            },
+            "no": {
+              "status": "open",
+              "text": null,
+              "origin": null,
+              "source": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "P6",
+      "title": "Судья",
+      "sides": [
+        {
+          "id": "P6.research.side.1",
+          "number": 1,
+          "title": null,
+          "status": "open",
+          "description": null,
+          "aspects": {
+            "yes": {
+              "status": "open",
+              "text": null,
+              "origin": null,
+              "source": null
+            },
+            "no": {
+              "status": "open",
+              "text": null,
+              "origin": null,
+              "source": null
+            }
+          }
+        },
+        {
+          "id": "P6.research.side.2",
+          "number": 2,
+          "title": null,
+          "status": "open",
+          "description": null,
+          "aspects": {
+            "yes": {
+              "status": "open",
+              "text": null,
+              "origin": null,
+              "source": null
+            },
+            "no": {
+              "status": "open",
+              "text": null,
+              "origin": null,
+              "source": null
+            }
+          }
+        },
+        {
+          "id": "P6.research.side.3",
+          "number": 3,
+          "title": null,
+          "status": "open",
+          "description": null,
+          "aspects": {
+            "yes": {
+              "status": "open",
+              "text": null,
+              "origin": null,
+              "source": null
+            },
+            "no": {
+              "status": "open",
+              "text": null,
+              "origin": null,
+              "source": null
+            }
+          }
+        },
+        {
+          "id": "P6.research.side.4",
+          "number": 4,
+          "title": null,
+          "status": "open",
+          "description": null,
+          "aspects": {
+            "yes": {
+              "status": "open",
+              "text": null,
+              "origin": null,
+              "source": null
+            },
+            "no": {
+              "status": "open",
+              "text": null,
+              "origin": null,
+              "source": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "P7",
+      "title": "Итог и память",
+      "sides": [
+        {
+          "id": "P7.research.side.1",
+          "number": 1,
+          "title": null,
+          "status": "open",
+          "description": null,
+          "aspects": {
+            "yes": {
+              "status": "open",
+              "text": null,
+              "origin": null,
+              "source": null
+            },
+            "no": {
+              "status": "open",
+              "text": null,
+              "origin": null,
+              "source": null
+            }
+          }
+        },
+        {
+          "id": "P7.research.side.2",
+          "number": 2,
+          "title": null,
+          "status": "open",
+          "description": null,
+          "aspects": {
+            "yes": {
+              "status": "open",
+              "text": null,
+              "origin": null,
+              "source": null
+            },
+            "no": {
+              "status": "open",
+              "text": null,
+              "origin": null,
+              "source": null
+            }
+          }
+        },
+        {
+          "id": "P7.research.side.3",
+          "number": 3,
+          "title": null,
+          "status": "open",
+          "description": null,
+          "aspects": {
+            "yes": {
+              "status": "open",
+              "text": null,
+              "origin": null,
+              "source": null
+            },
+            "no": {
+              "status": "open",
+              "text": null,
+              "origin": null,
+              "source": null
+            }
+          }
+        },
+        {
+          "id": "P7.research.side.4",
+          "number": 4,
+          "title": null,
+          "status": "open",
+          "description": null,
+          "aspects": {
+            "yes": {
+              "status": "open",
+              "text": null,
+              "origin": null,
+              "source": null
+            },
+            "no": {
+              "status": "open",
+              "text": null,
+              "origin": null,
+              "source": null
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
