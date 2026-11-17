@@ -471,23 +471,32 @@
         {
           "id": "P5.research.side.2",
           "number": 2,
-          "title": null,
-          "status": "open",
-          "description": null,
+          "title": "Нет",
+          "status": "author_discussion",
+          "description": "Разбор старой конструкции и удержание смысла созидательного разрушения.",
           "aspects": {
             "yes": {
-              "status": "open",
-              "text": null,
-              "origin": null,
-              "source": null
+              "status": "captured",
+              "text": "Активно разбирать или разрушать старую конструкцию, освобождая место новой.",
+              "origin": "author_discussion_editorial_paraphrase",
+              "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6961963253"
             },
             "no": {
-              "status": "open",
-              "text": null,
-              "origin": null,
-              "source": null
+              "status": "captured",
+              "text": "Созидательно разрушать со смыслом: понимать, что разобрать, что сохранить и ради чего.",
+              "origin": "author_discussion_editorial_paraphrase",
+              "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6961963253"
             }
-          }
+          },
+          "accepted_example": {
+            "origin": "assistant_example_accepted_by_author",
+            "text": "Убрать устаревший модуль, сохранив полезные части и зависимости.",
+            "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6961963253"
+          },
+          "limitations": [
+            "Это запись концепции, не разрешение удалять файлы, модули или данные.",
+            "Критерии устаревания и сохранения полезных частей не определены."
+          ]
         },
         {
           "id": "P5.research.side.3",
@@ -532,10 +541,11 @@
           }
         }
       ],
-      "source_update": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6961900886",
+      "source_update": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6961963253",
       "open_questions": [
-        "Как раскрываются стороны 2–4 Действия?",
-        "Как устроены оболочка, границы исполнителя и проверка фактической остановки?"
+        "Как раскрываются стороны 3–4 Действия?",
+        "Как устроены оболочка, границы исполнителя и проверка фактической остановки?",
+        "Как определять, что разобрать, что сохранить и как проверить результат?"
       ]
     },
     {
