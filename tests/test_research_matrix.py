@@ -24,7 +24,7 @@ class ResearchMatrixTests(unittest.TestCase):
                     else:
                         self.assertEqual(a["status"], "open")
                         self.assertIsNone(a["text"])
-        self.assertEqual(set(populated), {(p, n, a) for p, sides in [("P1", [1, 2, 4]), ("P2", [1, 2, 3, 4]), ("P3", [1, 2, 4]), ("P4", [1, 2, 3])] for n in sides for a in ["yes", "no"]} | {("P3", 3, a) for a in ["yes", "no"]} | {("P4", 4, "no"), ("P4", 4, "yes")})
+        self.assertEqual(set(populated), {(p, n, a) for p, sides in [("P1", [1, 2, 4]), ("P2", [1, 2, 3, 4]), ("P3", [1, 2, 4]), ("P4", [1, 2, 3]), ("P5", [1])] for n in sides for a in ["yes", "no"]} | {("P3", 3, a) for a in ["yes", "no"]} | {("P4", 4, "no"), ("P4", 4, "yes")})
 
     def test_p2_voice_author_capture(self):
         m = json.loads((ROOT / "model/research/matrix-20261114.json").read_text())
@@ -70,6 +70,22 @@ class ResearchMatrixTests(unittest.TestCase):
         self.assertEqual(p["engineering_caution"]["origin"], "assistant_engineering_precaution")
         self.assertIn("пространство", p["sides"][0]["aspects"]["no"]["text"])
         self.assertIn("не выравнивается", p["sides"][1]["aspects"]["no"]["text"])
+
+    def test_p5_execution_and_boundary(self):
+        m = json.loads((ROOT / "model/research/matrix-20261114.json").read_text())
+        p = m["pillars"][4]
+        s = p["sides"][0]
+        for a in s["aspects"].values():
+            self.assertEqual(a["status"], "captured")
+            self.assertIn("6961900886", a["source"])
+        self.assertIn("Голосом", s["aspects"]["yes"]["text"])
+        self.assertIn("остановить", s["aspects"]["no"]["text"])
+        self.assertIn("возможно skills", s["author_examples"]["no"])
+        self.assertEqual(s["editorial_interpretation"]["origin"], "assistant_interpretation")
+        for side in p["sides"][1:]:
+            for a in side["aspects"].values():
+                self.assertEqual(a["status"], "open")
+                self.assertIsNone(a["text"])
 
     def test_gliding_fixation_is_not_contract(self):
         m = json.loads((ROOT / "model/research/matrix-20261114.json").read_text())

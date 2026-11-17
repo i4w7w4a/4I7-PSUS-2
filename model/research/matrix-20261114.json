@@ -441,22 +441,31 @@
         {
           "id": "P5.research.side.1",
           "number": 1,
-          "title": null,
-          "status": "open",
-          "description": null,
+          "title": "Да",
+          "status": "author_discussion",
+          "description": "Активное выполнение озвученной задачи и оболочка удержания исполнителя.",
           "aspects": {
             "yes": {
-              "status": "open",
-              "text": null,
-              "origin": null,
-              "source": null
+              "status": "captured",
+              "text": "Конкретно и активно выполнять задачу, озвученную Голосом.",
+              "origin": "author_discussion_editorial_paraphrase",
+              "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6961900886"
             },
             "no": {
-              "status": "open",
-              "text": null,
-              "origin": null,
-              "source": null
+              "status": "captured",
+              "text": "Оболочка и возможность удержать исполнителя в рамках, отдёрнуть или остановить его.",
+              "origin": "author_discussion_editorial_paraphrase",
+              "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6961900886"
             }
+          },
+          "author_examples": {
+            "yes": "Окно агента, пишущего код — пример, не определение.",
+            "no": "Harness, возможно skills; образы «стопарь», «ниточка». Не утверждается, что любой skill ограничивает или останавливает исполнителя."
+          },
+          "editorial_interpretation": {
+            "status": "under_review",
+            "origin": "assistant_interpretation",
+            "text": "P2/2 можно рассматривать как команду «стой», а P5/1.нет как механизм удержания/остановки. Это сопоставление ассистента, не окончательное разграничение автора."
           }
         },
         {
@@ -522,6 +531,11 @@
             }
           }
         }
+      ],
+      "source_update": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6961900886",
+      "open_questions": [
+        "Как раскрываются стороны 2–4 Действия?",
+        "Как устроены оболочка, границы исполнителя и проверка фактической остановки?"
       ]
     },
     {
