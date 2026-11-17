@@ -734,23 +734,27 @@
         {
           "id": "P7.research.side.2",
           "number": 2,
-          "title": null,
-          "status": "open",
-          "description": null,
+          "title": "Нет",
+          "status": "author_discussion",
+          "description": "Чистка активной памяти с сохранением полезной истории.",
           "aspects": {
             "yes": {
-              "status": "open",
-              "text": null,
-              "origin": null,
-              "source": null
+              "status": "captured",
+              "text": "Вывести устаревшее из активной памяти, пометив, например, решение заменённым.",
+              "origin": "assistant_proposal_accepted_by_author",
+              "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6962542992"
             },
             "no": {
-              "status": "open",
-              "text": null,
-              "origin": null,
-              "source": null
+              "status": "captured",
+              "text": "Сохранить исторический след, когда он объясняет путь к решению: неудачная попытка скрыта из обычной выдачи, но ссылка сохранена.",
+              "origin": "assistant_proposal_accepted_by_author",
+              "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6962542992"
             }
-          }
+          },
+          "limitations": [
+            "Вывод из активной памяти не означает физическое удаление.",
+            "Критерии устаревания и полезности исторического следа не определены."
+          ]
         },
         {
           "id": "P7.research.side.3",
@@ -811,10 +815,10 @@
         "text": "Хранит знания системы; на авторской схеме внизу, функционально близок к оркестратору.",
         "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6962428263"
       },
-      "source_update": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6962428263",
+      "source_update": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6962542992",
       "open_questions": [
-        "Как раскрываются стороны 2–4 Хранителя?",
-        "Каковы правила контроллера/модерирующей прослойки и границы её полномочий?"
+        "Как раскрываются стороны 3–4 Хранителя?",
+        "Каковы правила фильтра, устаревания и сохранения исторического следа?"
       ]
     }
   ],
@@ -831,4 +835,3 @@
   },
   "updated_at": "2026-11-17"
 }
-
