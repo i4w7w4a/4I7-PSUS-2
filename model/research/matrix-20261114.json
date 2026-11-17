@@ -759,23 +759,28 @@
         {
           "id": "P7.research.side.3",
           "number": 3,
-          "title": null,
-          "status": "open",
-          "description": null,
+          "title": "Воздержание",
+          "status": "author_discussion",
+          "description": "Сохранить слабый сигнал и заметить цену затянувшейся паузы.",
           "aspects": {
             "yes": {
-              "status": "open",
-              "text": null,
-              "origin": null,
-              "source": null
+              "status": "captured",
+              "text": "Удержать слабый сигнал, сохранить его с источником и обстоятельствами, пока не используя как основание рабочих решений.",
+              "origin": "assistant_revision_accepted_after_author_correction",
+              "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6962647604"
             },
             "no": {
-              "status": "open",
-              "text": null,
-              "origin": null,
-              "source": null
+              "status": "captured",
+              "text": "Заметить, когда пауза превращается в слепую зону; при повторении сигналов или новых основаниях поднять их с пометкой «нужно проверить».",
+              "origin": "assistant_revision_accepted_after_author_correction",
+              "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6962647604"
             }
-          }
+          },
+          "revision_note": "Автор указал на недостающий негативный аспект и цену воздержания; принял последующую редакцию ассистента. Ранний набросок не смешивается с этой парой.",
+          "limitations": [
+            "Повторение или новые основания — повод проверить, не автоматическое доказательство истинности.",
+            "Пороги, сроки и процедура проверки не определены."
+          ]
         },
         {
           "id": "P7.research.side.4",
@@ -815,10 +820,10 @@
         "text": "Хранит знания системы; на авторской схеме внизу, функционально близок к оркестратору.",
         "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6962428263"
       },
-      "source_update": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6962542992",
+      "source_update": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6962647604",
       "open_questions": [
-        "Как раскрываются стороны 3–4 Хранителя?",
-        "Каковы правила фильтра, устаревания и сохранения исторического следа?"
+        "Как раскрывается сторона 4 Хранителя?",
+        "Каковы критерии поднятия слабого сигнала и проверки цены паузы?"
       ]
     }
   ],
