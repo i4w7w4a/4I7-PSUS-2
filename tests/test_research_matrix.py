@@ -24,7 +24,7 @@ class ResearchMatrixTests(unittest.TestCase):
                     else:
                         self.assertEqual(a["status"], "open")
                         self.assertIsNone(a["text"])
-        self.assertEqual(set(populated), {(p, n, a) for p, sides in [("P1", [1, 2, 4]), ("P2", [1, 2, 3, 4]), ("P3", [1, 2, 4]), ("P4", [1, 2, 3]), ("P5", [1, 2, 3, 4])] for n in sides for a in ["yes", "no"]} | {("P3", 3, a) for a in ["yes", "no"]} | {("P4", 4, "no"), ("P4", 4, "yes")})
+        self.assertEqual(set(populated), {(p, n, a) for p, sides in [("P1", [1, 2, 4]), ("P2", [1, 2, 3, 4]), ("P3", [1, 2, 4]), ("P4", [1, 2, 3]), ("P5", [1, 2, 3, 4]), ("P6", [1])] for n in sides for a in ["yes", "no"]} | {("P3", 3, a) for a in ["yes", "no"]} | {("P4", 4, "no"), ("P4", 4, "yes")})
 
     def test_p2_voice_author_capture(self):
         m = json.loads((ROOT / "model/research/matrix-20261114.json").read_text())
@@ -102,6 +102,22 @@ class ResearchMatrixTests(unittest.TestCase):
         self.assertIn("одну задачу", fourth["aspects"]["yes"]["text"])
         self.assertIn("границы", fourth["aspects"]["no"]["text"])
         self.assertEqual(fourth["editorial_examples"]["origin"], "assistant_examples_not_author_conditions")
+
+    def test_p6_verdict_and_authority_limits(self):
+        m = json.loads((ROOT / "model/research/matrix-20261114.json").read_text())
+        p = m["pillars"][5]
+        s = p["sides"][0]
+        for a in s["aspects"].values():
+            self.assertEqual(a["status"], "captured")
+            self.assertIn("6962175481", a["source"])
+        self.assertIn("вердикт", s["aspects"]["yes"]["text"])
+        self.assertIn("старшая инстанция", s["aspects"]["no"]["text"])
+        self.assertEqual(s["editorial_interpretation"]["origin"], "assistant_interpretation")
+        self.assertIn("не назначен", s["limitations"][0])
+        for side in p["sides"][1:]:
+            for a in side["aspects"].values():
+                self.assertEqual(a["status"], "open")
+                self.assertIsNone(a["text"])
 
     def test_gliding_fixation_is_not_contract(self):
         m = json.loads((ROOT / "model/research/matrix-20261114.json").read_text())

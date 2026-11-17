@@ -574,23 +574,33 @@
         {
           "id": "P6.research.side.1",
           "number": 1,
-          "title": null,
-          "status": "open",
-          "description": null,
+          "title": "Да",
+          "status": "author_discussion",
+          "description": "Рассуждение и вердикт Судьи при наличии старшей инстанции.",
           "aspects": {
             "yes": {
-              "status": "open",
-              "text": null,
-              "origin": null,
-              "source": null
+              "status": "captured",
+              "text": "Судить и рассуждать, разбирать неопределённости, быть строгим и определённым; мочь вынести вердикт, итоговую печать на действие.",
+              "origin": "author_discussion_editorial_paraphrase",
+              "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6962175481"
             },
             "no": {
-              "status": "open",
-              "text": null,
-              "origin": null,
-              "source": null
+              "status": "captured",
+              "text": "Над Судьёй есть старшая инстанция: оракул, смотрящий, человек, главный оркестратор. Судья не является последней безусловной инстанцией.",
+              "origin": "author_discussion_editorial_paraphrase",
+              "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6962175481"
             }
-          }
+          },
+          "editorial_interpretation": {
+            "origin": "assistant_interpretation",
+            "status": "under_review",
+            "text": "Подотчётность и пределы полномочий: строгость не означает непогрешимость, возможность вердикта не устанавливает его безусловную окончательность."
+          },
+          "limitations": [
+            "Порядок апелляций и отмены вердикта не назначен.",
+            "Иерархия человека и оркестратора и тождество перечисленных обозначений не установлены.",
+            "Форма итоговой печати и критерии достаточности оснований открыты."
+          ]
         },
         {
           "id": "P6.research.side.2",
@@ -655,6 +665,12 @@
             }
           }
         }
+      ],
+      "source_update": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6962175481",
+      "open_questions": [
+        "Как раскрываются стороны 2–4 Судьи?",
+        "Что служит достаточным основанием вердикта и где границы конкретного решения?",
+        "Как устроено обращение к старшей инстанции без предположенной иерархии?"
       ]
     },
     {
