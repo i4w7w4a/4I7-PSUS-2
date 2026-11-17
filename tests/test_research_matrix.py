@@ -160,6 +160,12 @@ class ResearchMatrixTests(unittest.TestCase):
                 self.assertEqual(a["status"], "open")
                 self.assertIsNone(a["text"])
         self.assertEqual(m["pillars"][5]["sides"][1]["aspects"]["no"]["status"], "captured")
+        draft = p["sides"][3]["draft_notes"]
+        self.assertEqual(draft["status"], "incomplete_draft")
+        self.assertEqual(draft["origin"], "author_interrupted_statement")
+        self.assertIn("6962691863", draft["source"])
+        self.assertIn("степеней", draft["yes_fragment"])
+        self.assertIn("всегда имеет доступ", draft["no_fragment"])
 
     def test_gliding_fixation_is_not_contract(self):
         m = json.loads((ROOT / "model/research/matrix-20261114.json").read_text())
