@@ -698,28 +698,36 @@
     },
     {
       "id": "P7",
-      "title": "Итог и память",
+      "title": "Хранитель",
       "sides": [
         {
           "id": "P7.research.side.1",
           "number": 1,
-          "title": null,
-          "status": "open",
-          "description": null,
+          "title": "Да",
+          "status": "author_discussion",
+          "description": "Хранилище знаний и его контролирующая/модерирующая прослойка.",
           "aspects": {
             "yes": {
-              "status": "open",
-              "text": null,
-              "origin": null,
-              "source": null
+              "status": "captured",
+              "text": "Устройство памяти, хранилище знаний системы.",
+              "origin": "author_discussion_editorial_paraphrase",
+              "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6962428263"
             },
             "no": {
-              "status": "open",
-              "text": null,
-              "origin": null,
-              "source": null
+              "status": "captured",
+              "text": "Контроллер, модерирующая прослойка или фильтр хранилища.",
+              "origin": "author_discussion_editorial_paraphrase",
+              "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6962428263"
             }
-          }
+          },
+          "author_examples": {
+            "yes": "Obsidian и векторная память — разные образы, не обязательная технология и не одно и то же.",
+            "no": "Контроллер/прослойка/фильтр на примере векторной базы; правила не заданы."
+          },
+          "limitations": [
+            "Конкретные правила фильтра не определены.",
+            "Положение внизу схемы и близость к оркестратору не назначают иерархию или тождество с i."
+          ]
         },
         {
           "id": "P7.research.side.2",
@@ -784,6 +792,27 @@
             }
           }
         }
+      ],
+      "name_history": [
+        {
+          "title": "Итог и память",
+          "status": "previous_working_title"
+        },
+        {
+          "title": "Хранитель",
+          "status": "author_discussion",
+          "date": "2026-11-17",
+          "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6962428263"
+        }
+      ],
+      "author_context": {
+        "text": "Хранит знания системы; на авторской схеме внизу, функционально близок к оркестратору.",
+        "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6962428263"
+      },
+      "source_update": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6962428263",
+      "open_questions": [
+        "Как раскрываются стороны 2–4 Хранителя?",
+        "Каковы правила контроллера/модерирующей прослойки и границы её полномочий?"
       ]
     }
   ],
