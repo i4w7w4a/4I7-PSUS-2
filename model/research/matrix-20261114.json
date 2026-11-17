@@ -501,23 +501,32 @@
         {
           "id": "P5.research.side.3",
           "number": 3,
-          "title": null,
-          "status": "open",
-          "description": null,
+          "title": "Воздержание",
+          "status": "author_discussion",
+          "description": "Активная тихая поддержка и время/условие её окончания.",
           "aspects": {
             "yes": {
-              "status": "open",
-              "text": null,
-              "origin": null,
-              "source": null
+              "status": "captured",
+              "text": "Активно воздерживаться: тихо выполнять поддерживающую функцию, собирать ресурсы и быть опорой.",
+              "origin": "author_discussion_editorial_paraphrase",
+              "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6962026026"
             },
             "no": {
-              "status": "open",
-              "text": null,
-              "origin": null,
-              "source": null
+              "status": "captured",
+              "text": "Удерживать время или условие окончания воздержания: когда срок или нужда исчерпаны, функция прекращается, меняется или упраздняется.",
+              "origin": "author_discussion_editorial_paraphrase",
+              "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6962026026"
             }
-          }
+          },
+          "author_example": {
+            "text": "Скрипт по времени; иначе «вечный сон». Пример не ограничивает аспект скриптами или только таймером.",
+            "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6962026026"
+          },
+          "revision_note": "Авторская пара активной поддержки и окончания функции, не прежняя гипотеза ассистента.",
+          "limitations": [
+            "Конкретный срок, достаточность ресурсов и критерии исчерпания нужды не определены.",
+            "Документирование не запускает скрипты и не останавливает реальные процессы."
+          ]
         },
         {
           "id": "P5.research.side.4",
@@ -541,11 +550,12 @@
           }
         }
       ],
-      "source_update": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6961963253",
+      "source_update": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6962026026",
       "open_questions": [
-        "Как раскрываются стороны 3–4 Действия?",
+        "Как раскрывается сторона 4 Действия?",
         "Как устроены оболочка, границы исполнителя и проверка фактической остановки?",
-        "Как определять, что разобрать, что сохранить и как проверить результат?"
+        "Как определять, что разобрать, что сохранить и как проверить результат?",
+        "Как определить время или условие окончания поддерживающей функции?"
       ]
     },
     {
