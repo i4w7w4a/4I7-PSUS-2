@@ -531,31 +531,40 @@
         {
           "id": "P5.research.side.4",
           "number": 4,
-          "title": null,
-          "status": "open",
-          "description": null,
+          "title": "Скольжение",
+          "status": "author_discussion",
+          "description": "Совместное выполнение одной задачи несколькими агентами и контракты цели/границ движения.",
           "aspects": {
             "yes": {
-              "status": "open",
-              "text": null,
-              "origin": null,
-              "source": null
+              "status": "captured",
+              "text": "Несколько агентов в режиме наподобие swarm выполняют одну задачу, обмениваются промежуточными результатами и отчитываются оркестратору.",
+              "origin": "author_discussion_editorial_paraphrase",
+              "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6962084983"
             },
             "no": {
-              "status": "open",
-              "text": null,
-              "origin": null,
-              "source": null
+              "status": "captured",
+              "text": "Контракты скольжения задают цель и границы движения, чтобы не ускользнуть слишком далеко.",
+              "origin": "author_discussion_editorial_paraphrase",
+              "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6962084983"
             }
-          }
+          },
+          "editorial_examples": {
+            "origin": "assistant_examples_not_author_conditions",
+            "text": "Подхват работы и сверка — редакционные примеры, не утверждённые обязательные условия автора."
+          },
+          "limitations": [
+            "Swarm — образ организации, не назначение библиотеки или готового протокола.",
+            "Формат контрактов и механизм соблюдения границ не определены.",
+            "Документация не запускает агентов и не даёт полномочий внешним агентам."
+          ]
         }
       ],
-      "source_update": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6962026026",
+      "source_update": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6962084983",
       "open_questions": [
-        "Как раскрывается сторона 4 Действия?",
         "Как устроены оболочка, границы исполнителя и проверка фактической остановки?",
         "Как определять, что разобрать, что сохранить и как проверить результат?",
-        "Как определить время или условие окончания поддерживающей функции?"
+        "Как определить время или условие окончания поддерживающей функции?",
+        "Как задавать и пересматривать контракты скольжения, обмен результатами и отчёт оркестратору?"
       ]
     },
     {

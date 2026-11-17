@@ -24,7 +24,7 @@ class ResearchMatrixTests(unittest.TestCase):
                     else:
                         self.assertEqual(a["status"], "open")
                         self.assertIsNone(a["text"])
-        self.assertEqual(set(populated), {(p, n, a) for p, sides in [("P1", [1, 2, 4]), ("P2", [1, 2, 3, 4]), ("P3", [1, 2, 4]), ("P4", [1, 2, 3]), ("P5", [1, 2, 3])] for n in sides for a in ["yes", "no"]} | {("P3", 3, a) for a in ["yes", "no"]} | {("P4", 4, "no"), ("P4", 4, "yes")})
+        self.assertEqual(set(populated), {(p, n, a) for p, sides in [("P1", [1, 2, 4]), ("P2", [1, 2, 3, 4]), ("P3", [1, 2, 4]), ("P4", [1, 2, 3]), ("P5", [1, 2, 3, 4])] for n in sides for a in ["yes", "no"]} | {("P3", 3, a) for a in ["yes", "no"]} | {("P4", 4, "no"), ("P4", 4, "yes")})
 
     def test_p2_voice_author_capture(self):
         m = json.loads((ROOT / "model/research/matrix-20261114.json").read_text())
@@ -95,10 +95,13 @@ class ResearchMatrixTests(unittest.TestCase):
         self.assertIn("поддерживающую", third["aspects"]["yes"]["text"])
         self.assertIn("условие окончания", third["aspects"]["no"]["text"])
         self.assertIn("вечный сон", third["author_example"]["text"])
-        for side in p["sides"][3:]:
-            for a in side["aspects"].values():
-                self.assertEqual(a["status"], "open")
-                self.assertIsNone(a["text"])
+        fourth = p["sides"][3]
+        for a in fourth["aspects"].values():
+            self.assertEqual(a["status"], "captured")
+            self.assertIn("6962084983", a["source"])
+        self.assertIn("одну задачу", fourth["aspects"]["yes"]["text"])
+        self.assertIn("границы", fourth["aspects"]["no"]["text"])
+        self.assertEqual(fourth["editorial_examples"]["origin"], "assistant_examples_not_author_conditions")
 
     def test_gliding_fixation_is_not_contract(self):
         m = json.loads((ROOT / "model/research/matrix-20261114.json").read_text())
