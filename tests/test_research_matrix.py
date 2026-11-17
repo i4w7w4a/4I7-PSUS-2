@@ -24,7 +24,7 @@ class ResearchMatrixTests(unittest.TestCase):
                     else:
                         self.assertEqual(a["status"], "open")
                         self.assertIsNone(a["text"])
-        self.assertEqual(set(populated), {(p, n, a) for p, sides in [("P1", [1, 2, 4]), ("P2", [1, 2, 3, 4]), ("P3", [1, 2, 4]), ("P4", [1, 2, 3])] for n in sides for a in ["yes", "no"]} | {("P3", 3, a) for a in ["yes", "no"]} | {("P4", 4, "no")})
+        self.assertEqual(set(populated), {(p, n, a) for p, sides in [("P1", [1, 2, 4]), ("P2", [1, 2, 3, 4]), ("P3", [1, 2, 4]), ("P4", [1, 2, 3])] for n in sides for a in ["yes", "no"]} | {("P3", 3, a) for a in ["yes", "no"]} | {("P4", 4, "no"), ("P4", 4, "yes")})
 
     def test_p2_voice_author_capture(self):
         m = json.loads((ROOT / "model/research/matrix-20261114.json").read_text())
@@ -41,17 +41,18 @@ class ResearchMatrixTests(unittest.TestCase):
         self.assertIn("адресату", p["sides"][3]["aspects"]["yes"]["text"])
         self.assertIn("внутренний диалог", p["sides"][3]["aspects"]["no"]["text"])
         self.assertIn("ошибочными", p["revision_note"])
-        self.assertEqual(m["pillars"][3]["sides"][3]["aspects"]["yes"]["status"], "open")
+        self.assertEqual(m["pillars"][3]["sides"][3]["aspects"]["yes"]["status"], "captured")
 
-    def test_p4_partial_author_capture(self):
+    def test_p4_author_capture(self):
         m = json.loads((ROOT / "model/research/matrix-20261114.json").read_text())
         p = m["pillars"][3]
         for s in p["sides"][:2]:
             for a in s["aspects"].values():
                 self.assertEqual(a["status"], "captured")
                 self.assertIn("6961642283", a["source"])
-        self.assertEqual(p["sides"][3]["aspects"]["yes"]["status"], "open")
-        self.assertIsNone(p["sides"][3]["aspects"]["yes"]["text"])
+        self.assertEqual(p["sides"][3]["aspects"]["yes"]["status"], "captured")
+        self.assertIn("двусторонний канал", p["sides"][3]["aspects"]["yes"]["text"])
+        self.assertIn("6961828374", p["sides"][3]["aspects"]["yes"]["source"])
         preset = p["sides"][3]
         self.assertEqual(preset["aspects"]["no"]["status"], "captured")
         self.assertIn("6961772643", preset["aspects"]["no"]["source"])
