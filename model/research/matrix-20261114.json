@@ -318,42 +318,42 @@
         {
           "id": "P4.research.side.1",
           "number": 1,
-          "title": null,
-          "status": "open",
-          "description": null,
+          "title": "Да",
+          "status": "author_discussion",
+          "description": "Балансировка нагрузки с сохранением пространства роста.",
           "aspects": {
             "yes": {
-              "status": "open",
-              "text": null,
-              "origin": null,
-              "source": null
+              "status": "captured",
+              "text": "Активно балансировать нагрузку и поддерживать устойчивость системы.",
+              "origin": "author_discussion_editorial_paraphrase",
+              "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6961642283"
             },
             "no": {
-              "status": "open",
-              "text": null,
-              "origin": null,
-              "source": null
+              "status": "captured",
+              "text": "Оставлять пространство для роста и дополнительные ресурсы; вмешиваться при реальном риске поломки, не подавляя развитие преждевременным ограничением.",
+              "origin": "author_discussion_editorial_paraphrase",
+              "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6961642283"
             }
           }
         },
         {
           "id": "P4.research.side.2",
           "number": 2,
-          "title": null,
-          "status": "open",
-          "description": null,
+          "title": "Нет",
+          "status": "author_discussion",
+          "description": "Намеренное снятие балансирующих ограничений и распознавание нарастающего перекоса.",
           "aspects": {
             "yes": {
-              "status": "open",
-              "text": null,
-              "origin": null,
-              "source": null
+              "status": "captured",
+              "text": "Намеренно снимать балансирующие ограничения для наблюдения за происходящим; пример — тестовая песочница.",
+              "origin": "author_discussion_editorial_paraphrase",
+              "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6961642283"
             },
             "no": {
-              "status": "open",
-              "text": null,
-              "origin": null,
-              "source": null
+              "status": "captured",
+              "text": "Замечать нарастающий перекос, когда система сама не выравнивается.",
+              "origin": "author_discussion_editorial_paraphrase",
+              "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6961642283"
             }
           }
         },
@@ -376,6 +376,14 @@
               "origin": null,
               "source": null
             }
+          },
+          "candidate_note": {
+            "status": "under_review",
+            "origin": "assistant_proposal_not_author_confirmed",
+            "text": "Наблюдать временный перекос и дать системе время выровняться.",
+            "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6961642283",
+            "aspect_assignment": null,
+            "note": "Автор не подтвердил пару аспектов; второй аспект не был озвучен. Ячейки остаются open."
           }
         },
         {
@@ -399,7 +407,18 @@
             }
           }
         }
-      ]
+      ],
+      "source_update": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6961642283",
+      "open_questions": [
+        "По чему отличать временный перекос от нарастающего?",
+        "Как распознать реальный риск поломки и выбрать масштаб наблюдения?",
+        "Как раскрываются авторские аспекты воздержания и скольжения Баланса?"
+      ],
+      "engineering_caution": {
+        "origin": "assistant_engineering_precaution",
+        "text": "Изолировать эксперимент со снятием ограничений от реальных систем, данных и необратимых последствий. Это не условие автора и не разрешение отключать защиту.",
+        "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6961642283"
+      }
     },
     {
       "id": "P5",
