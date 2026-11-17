@@ -360,31 +360,37 @@
         {
           "id": "P4.research.side.3",
           "number": 3,
-          "title": null,
-          "status": "open",
-          "description": null,
+          "title": "Воздержание",
+          "status": "author_discussion",
+          "description": "Построить средства наблюдения и анализа, затем созерцать самостоятельное поведение без вмешательства.",
           "aspects": {
             "yes": {
-              "status": "open",
-              "text": null,
-              "origin": null,
-              "source": null
+              "status": "captured",
+              "text": "Искать и строить системы наблюдения и анализа за самостоятельным поведением системы.",
+              "origin": "author_discussion_editorial_paraphrase",
+              "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6961715345"
             },
             "no": {
-              "status": "open",
-              "text": null,
-              "origin": null,
-              "source": null
+              "status": "captured",
+              "text": "Созерцать уже построенными средствами: отпустить вожжи, наблюдать параметры без вмешательства и затем анализировать наблюдаемое.",
+              "origin": "author_discussion_editorial_paraphrase",
+              "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6961715345"
             }
           },
           "candidate_note": {
-            "status": "under_review",
+            "status": "superseded",
             "origin": "assistant_proposal_not_author_confirmed",
             "text": "Наблюдать временный перекос и дать системе время выровняться.",
             "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6961642283",
             "aspect_assignment": null,
-            "note": "Автор не подтвердил пару аспектов; второй аспект не был озвучен. Ячейки остаются open."
-          }
+            "note": "Исторический набросок ассистента не принят как определение. Актуальная авторская пара отдельно зафиксирована в aspects; обещания самовыравнивания нет.",
+            "superseded_by": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6961715345"
+          },
+          "revision_note": "Ранее не подтверждённый набросок ассистента не подменяет авторскую пару: да — построение средств наблюдения/анализа, нет — созерцание ими без вмешательства и последующий анализ.",
+          "limitations": [
+            "Параметры, длительность наблюдения и критерии его завершения не определены.",
+            "Самовыравнивание системы не гарантируется."
+          ]
         },
         {
           "id": "P4.research.side.4",
@@ -408,11 +414,12 @@
           }
         }
       ],
-      "source_update": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6961642283",
+      "source_update": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6961715345",
       "open_questions": [
         "По чему отличать временный перекос от нарастающего?",
         "Как распознать реальный риск поломки и выбрать масштаб наблюдения?",
-        "Как раскрываются авторские аспекты воздержания и скольжения Баланса?"
+        "Как раскрывается скольжение P4?",
+        "Какие параметры наблюдать и когда завершать невмешательство?"
       ],
       "engineering_caution": {
         "origin": "assistant_engineering_precaution",

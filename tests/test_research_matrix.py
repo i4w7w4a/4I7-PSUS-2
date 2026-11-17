@@ -24,7 +24,7 @@ class ResearchMatrixTests(unittest.TestCase):
                     else:
                         self.assertEqual(a["status"], "open")
                         self.assertIsNone(a["text"])
-        self.assertEqual(set(populated), {(p, n, a) for p, sides in [("P1", [1, 2, 4]), ("P2", [1, 2, 3, 4]), ("P3", [1, 2, 4]), ("P4", [1, 2])] for n in sides for a in ["yes", "no"]} | {("P3", 3, a) for a in ["yes", "no"]})
+        self.assertEqual(set(populated), {(p, n, a) for p, sides in [("P1", [1, 2, 4]), ("P2", [1, 2, 3, 4]), ("P3", [1, 2, 4]), ("P4", [1, 2, 3])] for n in sides for a in ["yes", "no"]} | {("P3", 3, a) for a in ["yes", "no"]})
 
     def test_p2_voice_author_capture(self):
         m = json.loads((ROOT / "model/research/matrix-20261114.json").read_text())
@@ -41,7 +41,7 @@ class ResearchMatrixTests(unittest.TestCase):
         self.assertIn("адресату", p["sides"][3]["aspects"]["yes"]["text"])
         self.assertIn("внутренний диалог", p["sides"][3]["aspects"]["no"]["text"])
         self.assertIn("ошибочными", p["revision_note"])
-        for s in m["pillars"][3]["sides"][2:]:
+        for s in m["pillars"][3]["sides"][3:]:
             for a in s["aspects"].values():
                 self.assertEqual(a["status"], "open")
 
@@ -52,13 +52,19 @@ class ResearchMatrixTests(unittest.TestCase):
             for a in s["aspects"].values():
                 self.assertEqual(a["status"], "captured")
                 self.assertIn("6961642283", a["source"])
-        for s in p["sides"][2:]:
+        for s in p["sides"][3:]:
             for a in s["aspects"].values():
                 self.assertEqual(a["status"], "open")
                 self.assertIsNone(a["text"])
         proposal = p["sides"][2]["candidate_note"]
         self.assertEqual(proposal["origin"], "assistant_proposal_not_author_confirmed")
         self.assertIsNone(proposal["aspect_assignment"])
+        self.assertEqual(proposal["status"], "superseded")
+        for a in p["sides"][2]["aspects"].values():
+            self.assertEqual(a["status"], "captured")
+            self.assertIn("6961715345", a["source"])
+        self.assertIn("строить", p["sides"][2]["aspects"]["yes"]["text"])
+        self.assertIn("без вмешательства", p["sides"][2]["aspects"]["no"]["text"])
         self.assertEqual(p["engineering_caution"]["origin"], "assistant_engineering_precaution")
         self.assertIn("пространство", p["sides"][0]["aspects"]["no"]["text"])
         self.assertIn("не выравнивается", p["sides"][1]["aspects"]["no"]["text"])
