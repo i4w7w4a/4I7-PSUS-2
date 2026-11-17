@@ -109,87 +109,102 @@
         {
           "id": "P2.research.side.1",
           "number": 1,
-          "title": null,
-          "status": "open",
-          "description": null,
+          "title": "Да",
+          "status": "author_discussion",
+          "description": "Да: рабочее раскрытие Голоса в авторском разговоре.",
           "aspects": {
             "yes": {
-              "status": "open",
-              "text": null,
-              "origin": null,
-              "source": null
+              "status": "captured",
+              "text": "Выражать сформированное понимание идеи целенаправленным говорением и действием: сказать, что делать, дать ясное задание агенту, опираясь на выводы идеи.",
+              "origin": "author_discussion_editorial_paraphrase",
+              "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6961372944"
             },
             "no": {
-              "status": "open",
-              "text": null,
-              "origin": null,
-              "source": null
+              "status": "captured",
+              "text": "Удерживаться от лишнего говорения и речи в пустоту: у высказывания должна быть цель, а у задания — сформированное содержание.",
+              "origin": "author_discussion_editorial_paraphrase",
+              "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6961372944"
             }
           }
         },
         {
           "id": "P2.research.side.2",
           "number": 2,
-          "title": null,
-          "status": "open",
-          "description": null,
+          "title": "Нет",
+          "status": "author_discussion",
+          "description": "Нет: рабочее раскрытие Голоса в авторском разговоре.",
           "aspects": {
             "yes": {
-              "status": "open",
-              "text": null,
-              "origin": null,
-              "source": null
+              "status": "captured",
+              "text": "Уметь твёрдо сказать «нет»: остановить неверное действие или при аномалии сказать «погоди, постой, давай разберёмся».",
+              "origin": "author_discussion_editorial_paraphrase",
+              "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6961372944"
             },
             "no": {
-              "status": "open",
-              "text": null,
-              "origin": null,
-              "source": null
+              "status": "captured",
+              "text": "Вычленить аномалию и разобраться в самом отрицании: понять, почему возникло «нет», что именно неясно и что требует остановки.",
+              "origin": "author_discussion_editorial_paraphrase",
+              "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6961372944"
             }
-          }
+          },
+          "limitations": [
+            "«Минус на минус даёт плюс» — авторская аналогия прояснения, не математическое доказательство."
+          ]
         },
         {
           "id": "P2.research.side.3",
           "number": 3,
-          "title": null,
-          "status": "open",
-          "description": null,
+          "title": "Воздержание",
+          "status": "author_discussion",
+          "description": "Воздержание: рабочее раскрытие Голоса в авторском разговоре.",
           "aspects": {
             "yes": {
-              "status": "open",
-              "text": null,
-              "origin": null,
-              "source": null
+              "status": "captured",
+              "text": "Уловить намерение прежде, чем выражать его.",
+              "origin": "author_discussion_editorial_paraphrase",
+              "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6961372944"
             },
             "no": {
-              "status": "open",
-              "text": null,
-              "origin": null,
-              "source": null
+              "status": "captured",
+              "text": "Не допускать того, что сейчас мешает разобраться и уловить намерение.",
+              "origin": "author_discussion_editorial_paraphrase",
+              "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6961372944"
             }
           }
         },
         {
           "id": "P2.research.side.4",
           "number": 4,
-          "title": null,
-          "status": "open",
-          "description": null,
+          "title": "Скольжение",
+          "status": "author_discussion",
+          "description": "Скольжение: рабочее раскрытие Голоса в авторском разговоре.",
           "aspects": {
             "yes": {
-              "status": "open",
-              "text": null,
-              "origin": null,
-              "source": null
+              "status": "captured",
+              "text": "Знать, кому сказать, и целенаправленно двигаться к адресату по дорогам структуры: скелет даёт пути, по которым голос может быть услышан.",
+              "origin": "author_discussion_editorial_paraphrase",
+              "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6961372944"
             },
             "no": {
-              "status": "open",
-              "text": null,
-              "origin": null,
-              "source": null
+              "status": "captured",
+              "text": "Сохранить внешнее молчание и внутренний диалог, если путь неясен или есть сомнение: обратиться к i, образу оракула/главного оркестратора, обдумать, затем вернуться к внешнему выражению.",
+              "origin": "author_discussion_editorial_paraphrase",
+              "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6961372944"
             }
-          }
+          },
+          "limitations": [
+            "Песня и песнопение — первоначальный поисковый образ, не отдельное определение.",
+            "Внутренний диалог с i — авторский образ, не утверждение о субъективном сознании ИИ.",
+            "Жёсткие критерии выбора маршрута и завершения паузы пока не определены."
+          ]
         }
+      ],
+      "description": "Самовыражение идеи и подготовка инструментария для её выражения; скелет даёт дороги к адресату.",
+      "source_update": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6961372944",
+      "revision_note": "Названия сторон: Да, Нет, Воздержание, Скольжение. «Внимание» и «расширение» были ошибочными ярлыками ассистента в разговоре, не авторским переименованием.",
+      "open_questions": [
+        "Как различать сформированное намерение и преждевременную уверенность?",
+        "Как выбирать адресата и понимать, что внутреннее обдумывание достаточно для внешнего выражения?"
       ]
     },
     {
@@ -667,5 +682,6 @@
     },
     "historical_sources_rewritten": false,
     "note": "Mapping applies only to prior numbering where P2 was Skeleton and P3 Voice. Historical sources retain their original addresses; canonical model is unchanged."
-  }
+  },
+  "updated_at": "2026-11-17"
 }
