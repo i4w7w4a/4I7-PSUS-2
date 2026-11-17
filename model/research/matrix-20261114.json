@@ -395,9 +395,9 @@
         {
           "id": "P4.research.side.4",
           "number": 4,
-          "title": null,
-          "status": "open",
-          "description": null,
+          "title": "Скольжение",
+          "status": "author_discussion",
+          "description": "Частично раскрыто: отрицательный аспект сохраняет пресеты баланса и переходы между ними.",
           "aspects": {
             "yes": {
               "status": "open",
@@ -406,20 +406,25 @@
               "source": null
             },
             "no": {
-              "status": "open",
-              "text": null,
-              "origin": null,
-              "source": null
+              "status": "captured",
+              "text": "Сохранять настройки баланса как пресеты и быстро переходить от одного набора настроек к другому, включая переходы между системами.",
+              "origin": "author_discussion_editorial_paraphrase",
+              "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6961772643"
             }
-          }
+          },
+          "revision_note": "Сначала автор отнёс пресеты к да, затем сам исправил на нет и подтвердил. Актуальный адрес P4/4.нет (4.4.2); P4/4.да открыт.",
+          "limitations": [
+            "Формат, совместимость и условия выбора пресетов не определены.",
+            "Перенос между системами не означает автоматическую применимость любого набора."
+          ]
         }
       ],
-      "source_update": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6961715345",
+      "source_update": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6961772643",
       "open_questions": [
         "По чему отличать временный перекос от нарастающего?",
         "Как распознать реальный риск поломки и выбрать масштаб наблюдения?",
-        "Как раскрывается скольжение P4?",
-        "Какие параметры наблюдать и когда завершать невмешательство?"
+        "Какие параметры наблюдать и когда завершать невмешательство?",
+        "Как раскрывается P4/4.да и по чему проверять уместность пресета при переходе между системами?"
       ],
       "engineering_caution": {
         "origin": "assistant_engineering_precaution",
