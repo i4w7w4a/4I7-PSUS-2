@@ -24,7 +24,7 @@ class ResearchMatrixTests(unittest.TestCase):
                     else:
                         self.assertEqual(a["status"], "open")
                         self.assertIsNone(a["text"])
-        self.assertEqual(set(populated), {(p, n, a) for p, sides in [("P1", [1, 2, 4]), ("P2", [1, 2, 3, 4]), ("P3", [1, 2, 4]), ("P4", [1, 2, 3]), ("P5", [1, 2, 3, 4]), ("P6", [1])] for n in sides for a in ["yes", "no"]} | {("P3", 3, a) for a in ["yes", "no"]} | {("P4", 4, "no"), ("P4", 4, "yes"), ("P6", 2, "yes")})
+        self.assertEqual(set(populated), {(p, n, a) for p, sides in [("P1", [1, 2, 4]), ("P2", [1, 2, 3, 4]), ("P3", [1, 2, 4]), ("P4", [1, 2, 3]), ("P5", [1, 2, 3, 4]), ("P6", [1, 3])] for n in sides for a in ["yes", "no"]} | {("P3", 3, a) for a in ["yes", "no"]} | {("P4", 4, "no"), ("P4", 4, "yes"), ("P6", 2, "yes")})
 
     def test_p2_voice_author_capture(self):
         m = json.loads((ROOT / "model/research/matrix-20261114.json").read_text())
@@ -119,7 +119,14 @@ class ResearchMatrixTests(unittest.TestCase):
         self.assertIn("якорь", p["sides"][1]["aspects"]["yes"]["text"])
         self.assertEqual(p["sides"][1]["aspects"]["no"]["status"], "open")
         self.assertIsNone(p["sides"][1]["aspects"]["no"]["text"])
-        for side in p["sides"][2:]:
+        third = p["sides"][2]
+        for a in third["aspects"].values():
+            self.assertEqual(a["status"], "captured")
+            self.assertIn("6962281095", a["source"])
+        self.assertIn("присяжных", third["aspects"]["yes"]["text"])
+        self.assertIn("существенное", third["aspects"]["no"]["text"])
+        self.assertEqual(third["editorial_caution"]["origin"], "assistant_precaution_not_author_statement")
+        for side in p["sides"][3:]:
             for a in side["aspects"].values():
                 self.assertEqual(a["status"], "open")
                 self.assertIsNone(a["text"])

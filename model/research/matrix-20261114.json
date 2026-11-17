@@ -631,23 +631,32 @@
         {
           "id": "P6.research.side.3",
           "number": 3,
-          "title": null,
-          "status": "open",
-          "description": null,
+          "title": "Воздержание",
+          "status": "author_discussion",
+          "description": "Выслушивать дело и участников, затем выделять существенное в анализе.",
           "aspects": {
             "yes": {
-              "status": "open",
-              "text": null,
-              "origin": null,
-              "source": null
+              "status": "captured",
+              "text": "Рассматривать дело, слушать присяжных — разных агентов или работников, созерцать нюансы и выделять нужную конкретику перед решением.",
+              "origin": "author_discussion_editorial_paraphrase",
+              "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6962281095"
             },
             "no": {
-              "status": "open",
-              "text": null,
-              "origin": null,
-              "source": null
+              "status": "captured",
+              "text": "В анализе убирать лишнее из рассуждения, выделять главное и опираться на существенное.",
+              "origin": "author_discussion_editorial_paraphrase",
+              "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6962281095"
             }
-          }
+          },
+          "editorial_caution": {
+            "origin": "assistant_precaution_not_author_statement",
+            "text": "При отборе существенного сохранять потенциально важные противоречащие факты. Это предосторожность ассистента, не авторское определение."
+          },
+          "limitations": [
+            "Убирать лишнее из рассуждения не означает удалять исходные данные.",
+            "Присяжные — образ агентов/работников, не назначенный протокол голосования.",
+            "Критерии существенности и достаточности конкретики пока не определены."
+          ]
         },
         {
           "id": "P6.research.side.4",
@@ -671,12 +680,13 @@
           }
         }
       ],
-      "source_update": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6962220801",
+      "source_update": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6962281095",
       "open_questions": [
-        "Как раскрываются P6/2.нет и стороны 3–4 Судьи?",
+        "Как раскрываются P6/2.нет и сторона 4 Судьи?",
         "Что служит достаточным основанием вердикта и где границы конкретного решения?",
         "Как устроено обращение к старшей инстанции без предположенной иерархии?",
-        "Как распознать преждевременность вердикта и условия возврата к якорю?"
+        "Как распознать преждевременность вердикта и условия возврата к якорю?",
+        "Как различать существенное и лишнее, не теряя значимых противоречий?"
       ]
     },
     {
