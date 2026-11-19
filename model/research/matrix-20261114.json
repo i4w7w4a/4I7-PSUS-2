@@ -62,18 +62,21 @@
           "description": "Воздержание: выслушать идею, вникнуть в смысл и суть; это не равнодушие.",
           "aspects": {
             "yes": {
-              "status": "open",
-              "text": null,
-              "origin": null,
-              "source": null
+              "status": "captured",
+              "text": "Выслушать идею и вникнуть в её смысл, дать пониманию раскрыться.",
+              "origin": "assistant_proposal_accepted_by_author",
+              "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-7019427154"
             },
             "no": {
-              "status": "open",
-              "text": null,
-              "origin": null,
-              "source": null
+              "status": "captured",
+              "text": "Удержаться от преждевременного суждения, пока идея ещё раскрывается.",
+              "origin": "assistant_proposal_accepted_by_author",
+              "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-7019427154"
             }
-          }
+          },
+          "decision_ref": "knowledge/decisions/DR-20261119-001.md",
+          "revision_note": "19 ноября автор принял для работы редакционное разделение своей исходной мысли о выслушивании идеи на два аспекта.",
+          "proposal_source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6963072889"
         },
         {
           "id": "P1.research.side.4",
@@ -785,24 +788,25 @@
         {
           "id": "P7.research.side.4",
           "number": 4,
-          "title": null,
-          "status": "open",
-          "description": null,
+          "title": "Скольжение",
+          "status": "author_discussion",
+          "description": "Скольжение Хранителя по степеням системы и путь к главному Оракулу.",
           "aspects": {
             "yes": {
-              "status": "open",
-              "text": null,
-              "origin": null,
-              "source": null
+              "status": "captured",
+              "text": "Возможность проскользить в любую из степеней системы.",
+              "origin": "author_discussion_editorial_paraphrase",
+              "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-7019427154"
             },
             "no": {
-              "status": "open",
-              "text": null,
-              "origin": null,
-              "source": null
+              "status": "captured",
+              "text": "Путь к главному Оракулу. Сохранённые слова автора — «оракул всегда имеет доступ».",
+              "origin": "author_discussion_editorial_paraphrase",
+              "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-7019427154"
             }
           },
-          "draft_notes": {
+          "decision_ref": "knowledge/decisions/DR-20261119-001.md",
+          "previous_draft": {
             "status": "incomplete_draft",
             "origin": "author_interrupted_statement",
             "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6962691863",
@@ -813,8 +817,15 @@
               "Точный смысл степеней системы",
               "Завершение и подтверждение авторской пары"
             ],
-            "note": "Связь прервалась. Не дополнять за автора; не подменять гипотезой о передаче опыта и не выдавать права доступа."
-          }
+            "note": "Связь прервалась. Не дополнять за автора; не подменять гипотезой о передаче опыта и не выдавать права доступа.",
+            "date": "2026-11-17",
+            "superseded_by": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-7019427154"
+          },
+          "limitations": [
+            "Смысл выражения «степени системы» остаётся для уточнения.",
+            "Предмет, условия и границы доступа Оракула остаются для уточнения. Технические разрешения определяются отдельно."
+          ],
+          "revision_note": "19 ноября автор принял обе сохранившиеся части своего высказывания как рабочую пару Скольжения. Формулировки можно снова открыть и дополнить."
         }
       ],
       "name_history": [
@@ -833,9 +844,9 @@
         "text": "Хранит знания системы; на авторской схеме внизу, функционально близок к оркестратору.",
         "source": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6962428263"
       },
-      "source_update": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-6962691863",
+      "source_update": "https://github.com/i4w7w4a/4i7_psys/issues/12#issuecomment-7019427154",
       "open_questions": [
-        "Завершить P7/4: какие степени системы и к чему, при каких условиях имеет доступ Оракул?",
+        "Что именно означают «степени системы» и к чему, при каких условиях имеет доступ Оракул?",
         "Каковы критерии поднятия слабого сигнала и проверки цены паузы?"
       ]
     }
@@ -851,5 +862,5 @@
     "historical_sources_rewritten": false,
     "note": "Mapping applies only to prior numbering where P2 was Skeleton and P3 Voice. Historical sources retain their original addresses; canonical model is unchanged."
   },
-  "updated_at": "2026-11-17"
+  "updated_at": "2026-11-19"
 }

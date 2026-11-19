@@ -5,26 +5,20 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 class ResearchMatrixTests(unittest.TestCase):
-    def test_dimensions_and_open_cells(self):
+    def test_working_matrix_has_56_sourced_aspects(self):
         m = json.loads((ROOT / "model/research/matrix-20261114.json").read_text())
         self.assertEqual(m["status"], "under_review")
         self.assertFalse(m["canonical_model_changed"])
         self.assertIsNone(m["spatial_assignment"])
         self.assertEqual([p["id"] for p in m["pillars"]], [f"P{i}" for i in range(1, 8)])
-        populated = []
         for p in m["pillars"]:
             self.assertEqual([s["number"] for s in p["sides"]], [1, 2, 3, 4])
             for s in p["sides"]:
                 self.assertEqual(set(s["aspects"]), {"yes", "no"})
-                for name, a in s["aspects"].items():
-                    if a["status"] == "captured":
-                        populated.append((p["id"], s["number"], name))
-                        self.assertTrue(a["text"])
-                        self.assertTrue(a["source"])
-                    else:
-                        self.assertEqual(a["status"], "open")
-                        self.assertIsNone(a["text"])
-        self.assertEqual(set(populated), {(p, n, a) for p, sides in [("P1", [1, 2, 4]), ("P2", [1, 2, 3, 4]), ("P3", [1, 2, 4]), ("P4", [1, 2, 3]), ("P5", [1, 2, 3, 4]), ("P6", [1, 3, 4]), ("P7", [1, 2, 3])] for n in sides for a in ["yes", "no"]} | {("P3", 3, a) for a in ["yes", "no"]} | {("P4", 4, "no"), ("P4", 4, "yes"), ("P6", 2, "yes"), ("P6", 2, "no")})
+                for a in s["aspects"].values():
+                    self.assertEqual(a["status"], "captured")
+                    self.assertTrue(a["text"])
+                    self.assertTrue(a["source"])
 
     def test_p2_voice_author_capture(self):
         m = json.loads((ROOT / "model/research/matrix-20261114.json").read_text())
@@ -155,12 +149,18 @@ class ResearchMatrixTests(unittest.TestCase):
             self.assertEqual(a["origin"], "assistant_revision_accepted_after_author_correction")
             self.assertIn("6962647604", a["source"])
         self.assertIn("слепую зону", p["sides"][2]["aspects"]["no"]["text"])
-        for side in p["sides"][3:]:
-            for a in side["aspects"].values():
-                self.assertEqual(a["status"], "open")
-                self.assertIsNone(a["text"])
-        self.assertEqual(m["pillars"][5]["sides"][1]["aspects"]["no"]["status"], "captured")
-        draft = p["sides"][3]["draft_notes"]
+        gliding = p["sides"][3]
+        self.assertEqual(gliding["title"], "Скольжение")
+        self.assertEqual(gliding["status"], "author_discussion")
+        for a in gliding["aspects"].values():
+            self.assertEqual(a["origin"], "author_discussion_editorial_paraphrase")
+            self.assertIn("7019427154", a["source"])
+        self.assertIn("степеней", gliding["aspects"]["yes"]["text"])
+        self.assertIn("оракул всегда имеет доступ", gliding["aspects"]["no"]["text"])
+        self.assertIn("границы доступа", " ".join(gliding["limitations"]))
+        self.assertTrue((ROOT / gliding["decision_ref"]).is_file())
+        draft = gliding["previous_draft"]
+        self.assertEqual(draft["superseded_by"], gliding["aspects"]["yes"]["source"])
         self.assertEqual(draft["status"], "incomplete_draft")
         self.assertEqual(draft["origin"], "author_interrupted_statement")
         self.assertIn("6962691863", draft["source"])
@@ -175,8 +175,18 @@ class ResearchMatrixTests(unittest.TestCase):
         self.assertIn("6876277084", s["aspects"]["no"]["source"])
         self.assertIn("не установлено", s["open_questions"][0])
         self.assertIn("весь рассматриваемый аспект", s["node_note"])
-        for a in m["pillars"][0]["sides"][2]["aspects"].values():
-            self.assertEqual(a["status"], "open")
+
+    def test_p1_abstention_preserves_editorial_origin(self):
+        m = json.loads((ROOT / "model/research/matrix-20261114.json").read_text())
+        side = m["pillars"][0]["sides"][2]
+        self.assertEqual(side["title"], "Воздержание")
+        self.assertIn("6963072889", side["proposal_source"])
+        self.assertTrue((ROOT / side["decision_ref"]).is_file())
+        for a in side["aspects"].values():
+            self.assertEqual(a["origin"], "assistant_proposal_accepted_by_author")
+            self.assertIn("7019427154", a["source"])
+        self.assertIn("Выслушать идею", side["aspects"]["yes"]["text"])
+        self.assertIn("преждевременного суждения", side["aspects"]["no"]["text"])
 
     def test_author_numbering_and_candidates(self):
         m = json.loads((ROOT / "model/research/matrix-20261114.json").read_text())
