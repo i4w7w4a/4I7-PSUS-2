@@ -1,0 +1,50 @@
+{
+  "active_decision_ids": [
+    "D-CARD-CLI",
+    "D-CARD-NAME",
+    "D-CARD-PACK",
+    "D-CARD-PERSONAL",
+    "D-CARD-QUESTION",
+    "D-OBSERVER",
+    "D-PROJECT",
+    "D-RESEARCH"
+  ],
+  "context_content_id": "cec7fbb75afbc068a8c6aab3a38085d69a37b97b5beb10374c991cd85fdea9ba",
+  "memory_content_id": "c7cac5cf23614cb234a2910cf6e9010df8d048068e89502adfe02a8759ea99c8",
+  "memory_head": "9380ad3c1013b142f08d09eba451ccfbf58983269ebfb9a1a312690aa31d852f",
+  "memory_revision": 39,
+  "next_step": "При следующем изменении реального условия выяснить, кто им пользуется помимо записанных зависимостей. Зафиксировать ожидаемое действие до повторной передачи (R-DEPENDENCIES, R-REPEAT).",
+  "open_anchor_ids": [
+    "R-DEPENDENCIES",
+    "R-FILM",
+    "R-REPEAT"
+  ],
+  "participant_id": "oracle",
+  "project_id": "4i7-psus-2",
+  "receipts": [
+    {
+      "consequence": "Проверить, что вернул исполнитель к целому и на каком основании.",
+      "report_id": "https://github.com/i4w7w4a/4i7_psys/issues/21",
+      "result": "Обе карточки и результат отдельной оценки сохранены в опыте 001.",
+      "status": "applied",
+      "verification": "experiments/001-entry/README.md и два исходных ответа"
+    },
+    {
+      "consequence": "Зафиксировать независимые условия до изменения способа входа.",
+      "report_id": "https://github.com/i4w7w4a/4i7_psys/issues/26",
+      "result": "Четыре независимых условия сохранены в обеих карточках.",
+      "status": "applied",
+      "verification": "Протокол b66dd78 и исполненные ответы"
+    },
+    {
+      "consequence": "Проверить передачу следующего действия на рабочем материале v2.",
+      "report_id": "https://github.com/i4w7w4a/4i7_psys/issues/27",
+      "result": "Проведён небольшой сравнительный опыт с настоящей карточкой входа и двумя независимыми получателями.",
+      "status": "applied",
+      "verification": "C-ENTRY, S-PILOT:v1, S-ANSWER-A:v1 и S-ANSWER-B:v1"
+    }
+  ],
+  "saved_at": "2026-11-26T17:27:10.264477Z",
+  "schema_version": "0.1.0",
+  "task": "Работа с отдельной версией 4I7 PSUS 2 после первого опыта."
+}

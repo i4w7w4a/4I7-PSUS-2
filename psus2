@@ -1,0 +1,125 @@
+#!/usr/bin/env python3
+"""Прочитать текущую матрицу и рабочую память 4I7 PSUS 2."""
+import argparse
+from itertools import groupby
+import json
+from pathlib import Path
+import sys
+
+ROOT = Path(__file__).resolve().parent
+PROJECT_ID = "4i7-psus-2"
+sys.path.insert(0, str(ROOT / "scripts"))
+from context_pack import build_current
+
+
+def focus_lines(pack):
+    node, = pack["requested_nodes"]
+    pillars = pack["pillars"]
+    if node in ("i", "MODEL"):
+        return [f"Фокус {node} · " + " · ".join(f"{p['id']} {p['title']}" for p in pillars)]
+    pillar, = pillars
+    lines = [f"Фокус {node} · {pillar['title']}"]
+    for side in pillar["sides"]:
+        for number, key in enumerate(("yes", "no"), 1):
+            address = f"{pillar['id']}.{side['number']}.{number}"
+            if address in pack["focused_aspects"]:
+                aspect = side["aspects"][key]
+                sign = "да" if key == "yes" else "нет"
+                lines.append(f"  {address} · сторона {side['title']}, аспект {sign} · "
+                             f"{aspect['text'] or 'Вопрос открыт.'}")
+    return lines
+
+
+def source_label(ref):
+    return f"{ref['id']}:v{ref['version']}"
+
+
+def record_line(record, cited):
+    refs = [source_label(ref) for ref in record["source_refs"]]
+    cited.update((ref["id"], ref["version"]) for ref in record["source_refs"])
+    authority = record.get("authority_ref")
+    if authority and authority not in record["source_refs"]:
+        refs.append("принятие " + source_label(authority))
+        cited.add((authority["id"], authority["version"]))
+    sources = f" [{', '.join(refs)}]" if refs else ""
+    return f"{record['id']} · {record['text']}{sources}"
+
+
+def summary(pack):
+    memory = pack["working_memory"]
+    cited = set()
+    lines = ["4I7 PSUS 2", f"I · {pack['observer']['role']}", *focus_lines(pack)]
+    for title, group in (("Действующие положения", "active_decisions"),
+                         ("Наблюдения", "claims"),
+                         ("Открытые вопросы", "open_anchors"),
+                         ("Предложения", "proposals")):
+        records = memory[group]
+        if group in ("proposals", "claims") and not records:
+            continue
+        lines.extend(["", f"{title} ({len(records)})"])
+        ordered = sorted(records, key=lambda r: (r["scope"] != "project", r["scope"]))
+        for scope, members in groupby(ordered, key=lambda r: r["scope"]):
+            lines.append(f"  Область · {scope}")
+            for record in members:
+                line = record_line(record, cited)
+                if group == "claims":
+                    line += f" · {record['assessment']}"
+                lines.append("    " + line)
+                if group == "open_anchors":
+                    lines.append(f"      Условие возврата · {record['trigger']}")
+
+    records_by_id = {record["id"]: record
+                     for bucket in ("active_decisions", "proposals", "historical_decisions",
+                                    "claims", "open_anchors", "closed_anchors", "sources")
+                     for record in memory[bucket]}
+    objections = [edge for edge in memory["relations"] if edge["kind"] == "contradicts"]
+    if objections:
+        lines.extend(["", "Возражения"])
+        for edge in objections:
+            lines.append(f"  {edge['from']} ↔ {edge['to']}")
+            for identifier in (edge["from"], edge["to"]):
+                record = records_by_id[identifier]
+                if record["kind"] == "source":
+                    lines.append(f"    {identifier} · {record['locator']}")
+                else:
+                    lines.append("    " + record_line(record, cited))
+    if memory["review_needed"]:
+        lines.extend(["", "Требуют пересмотра (review_needed)"])
+        for identifier in memory["review_needed"]:
+            record = records_by_id[identifier]
+            lines.append(f"  {identifier} · {record['review_history'][-1]['reason']}")
+
+    if cited:
+        lines.extend(["", "Основания"])
+        for identifier, number in sorted(cited):
+            source = records_by_id[identifier]
+            version = source["versions"][number - 1]
+            location = version["locator"]
+            if source.get("locator_history") and source["locator"] != location:
+                location += f" (текущее расположение источника · {source['locator']})"
+            lines.append(f"  {identifier}:v{number} → {location}")
+
+    resume = pack["memory_binding"]["participant_checkpoint"]
+    if resume:
+        checkpoint = resume["checkpoint"]
+        lines.extend(["", f"Следующий шаг участника {checkpoint['participant_id']}",
+                      f"  {checkpoint['next_step']}"])
+    return "\n".join(lines)
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--node", default="i", help="Узел текущей матрицы, например P3.2.1")
+    parser.add_argument("--participant", help="Загрузить сверенную личную точку участника")
+    parser.add_argument("--json", action="store_true", help="Вывести полный пакет данных")
+    args = parser.parse_args()
+    try:
+        pack = build_current(ROOT, [args.node], ROOT / "memory/projects" / PROJECT_ID,
+                             PROJECT_ID, args.participant)
+        print(json.dumps(pack, ensure_ascii=False, indent=2) if args.json else summary(pack))
+    except (OSError, ValueError, KeyError, TypeError) as exc:
+        parser.exit(2, f"psus2 · Ошибка чтения. {exc}\n")
+
+
+if __name__ == "__main__":
+    main()
